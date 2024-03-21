@@ -109,6 +109,118 @@ h4 {
   margin-bottom: 2rem;
 }
 
+/* -------animation------- */
+
+@keyframes bounce{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes slideFromTop {
+  0%{
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes slideFromBottom {
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+/* -------navbar------- */
+
+.nav-btn{
+  font-size: 1.5rem;
+  color: var(--clr-primary);
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 1;
+  cursor: pointer;
+  animation: bounce 2s ease infinite;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--clr-grey-10);
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%);
+  transition: var(--transition);
+}
+
+.show-nav{
+  transform: translate(0);
+}
+
+.navbar-header{
+  text-align: left;
+}
+
+.nav-close{
+  font-size: 2.5rem;
+  color: #f29c9c;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav-close:hover{
+  color: #bb2525;
+}
+
+.nav-items{
+  list-style-type: none;
+  direction: rtl;
+}
+
+.nav-link{
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  color: var(--clr-grey-5);
+  transition: var(--transition);
+}
+
+.nav-link:hover{
+  background: var(--clr-primary-light);
+  border-right: 0.5rem solid var(--ff-primary);
+  padding-right: 1.5rem;
+  color: var(--clr-primary);
+}
+
+.nav-link i{
+  font-size: 1.4rem;
+  margin-left: 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar{
+    width: 30vw;
+    max-width: 20rem;
+  }
+}
+
 /* -------header------- */
 
 .header {
@@ -131,11 +243,14 @@ h4 {
 .banner h1 {
   color: var(--clr-primary);
   margin-bottom: 2rem;
+  animation: slideFromTop 2s ease-in-out 1;
 }
 .banner h2 {
   color: var(--clr-white);
   font-size: 1.75rem;
   margin-bottom: 3rem;
+  animation: slideFromBottom 2s ease-in-out 1;
+
 }
 
 .btn-banner {
@@ -143,6 +258,7 @@ h4 {
   outline: 0.125rem solid var(--clr-primary);
   outline-offset: 0.25rem;
   padding: 0.75rem 1.25rem;
+  animation: slideFromBottom 2s linear 1;
 }
 
 .content-divider {
