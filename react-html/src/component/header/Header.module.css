@@ -1,0 +1,14 @@
+.header {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url(../../../public/images/header.jpg) center/cover no-repeat fixed;
+    position: relative;
+  }
+
+
+.banner {
+   position: absolute; 
+   top: 50px;
+   left: 50px;
+   color: var(--clr-white);
+   border: solid 2px red;
+}
