@@ -6,9 +6,43 @@
 
 
 .banner {
+  width: 100%;
    position: absolute; 
-   top: 50px;
-   left: 50px;
-   color: var(--clr-white);
-   border: solid 2px red;
+   top: 50%;
+   left: 50%;  
+   transform: translate(-50%, -50%);
+   text-align: center;
+}
+.banner h1 {
+  color: var(--clr-primary);
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+.banner h2 {
+  color: var(--clr-white);
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.header a {
+  background: var(--clr-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  color: var(--clr-white);
+  transition: var(--transition);
+  font-size: 1.2rem;
+  outline: 0.15rem solid var(--clr-primary);
+  outline-offset: 0.28rem;
+}
+
+.header a:hover {
+  background: var(--clr-white);
+  color: var(--clr-primary);
+}
+
+/* content divider Div */
+.contentDivider {
+  background: linear-gradient(to left, var(--clr-primary),var(--clr-primary-light), var(--clr-primary));
+  height: 0.5rem;
+
 }
