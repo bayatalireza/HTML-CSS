@@ -1,0 +1,29 @@
+.features {
+  background: var(--clr-grey-10);
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: var(--clr-primary);
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+
+.feature-title {
+  margin-bottom: 1rem;
+}
+
+@media only  screen and (min-width:576px) {
+  .feature {
+    float: right;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  .feature {
+    float: right;
+    width: 25%;
+  }
+}

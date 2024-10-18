@@ -6,6 +6,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -42,13 +43,19 @@ h1{
 h2{
   font-size: 1.5rem;
 }
+h4 {
+  font-size: 1rem;
+}
 
-@media screen and(min-width: 800px) {
+@media screen and (min-width:800px) {
   h1{
     font-size: 2rem;
   }
   h2{
     font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.25rem;
   }
 }
 
@@ -63,4 +70,10 @@ h2{
 .btn:hover {
   background: var(--clr-white);
   color: var(--clr-primary);
+}
+
+.clearFix::after, .clearFix::before {
+  content: '';
+  clear: both;
+  display: block;
 }
