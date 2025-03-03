@@ -1,0 +1,57 @@
+.about {
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: center; */
+}
+
+.about-img, .about-info {
+
+  padding: 2rem 0;
+}
+
+
+
+.about-picture {
+  background: url("../../../public/images/about-bcg.jpg");
+  height: 100vh;
+  transition: var(--transition);
+}
+.about-picture-container {
+    max-width: 40rem;
+    width: 100vw;
+    border: 0.3rem solid var(--clr-primary);
+    border-radius: var(--radius);
+    background: var(--clr-primary);
+    overflow: hidden;
+}
+
+.about-picture-container:hover .about-picture {
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+.section-title h3 {
+    color: var(--clr-primary);
+}
+
+.section-title {
+    margin-bottom: 2rem;
+}
+
+.about-text {
+    color: var(--clr-grey-5);
+}
+
+.about-btn {
+    margin-top: 1.5rem;
+}
+@media screen and(min-width:992px) {
+    .about-img{
+        float: left;
+        width: 45%;
+    }
+    .about-info{
+        float: right;
+        width: 45%;
+    }
+}

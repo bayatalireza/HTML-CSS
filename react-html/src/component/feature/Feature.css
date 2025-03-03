@@ -1,6 +1,19 @@
 .features {
   background: var(--clr-grey-10);
+}
+.feature {
+  height: 300px;
   text-align: center;
+  padding: 2.5rem 0;
+  transition: var(--transition);
+}
+
+.feature:hover {
+  background: var(--clr-white);
+  box-shadow: 0 2px 0 var(--clr-primary);
+}
+.feature:hover .feature-icon {
+  transform: translateY(-5px);
 }
 
 .feature-icon {
@@ -8,10 +21,17 @@
   color: var(--clr-primary);
   display: inline-block;
   margin-bottom: 1.2rem;
+  transition: var(--transition);
 }
 
 .feature-title {
   margin-bottom: 1rem;
+}
+
+.feature-text {
+  color: var(--clr-primary);
+  max-width: 17rem;
+  margin: 0 auto;
 }
 
 @media only  screen and (min-width:576px) {
